@@ -7,21 +7,6 @@
 	hyphens: none;
 	-epub-hyphens: none;
 }
-
-[epub|type~="epigraph"] em,
-[epub|type~="epigraph"] i{
-	font-style: normal;
-}
-
-[epub|type~="epigraph"] cite{
-	font-style: normal;
-	font-variant: small-caps;
-	margin-top: 1em;
-}
-
-[epub|type~="epigraph"] cite i{
-	font-style: italic;
-}
 /* End all epigraphs */
 
 /* Full-page epigraphs */
@@ -51,19 +36,30 @@ section[epub|type~="epigraph"] > *{
 	section[epub|type~="epigraph"] > *{
 		margin: 0;
 	}
-
-	section[epub|type~="epigraph"] > * + *{
-		margin-top: 3em;
-	}
 }
 /* End full-page epigraphs */
 
+/* Poems */
+[epub|type~="z3998:poem"] p{
+	text-align: initial;
+	text-indent: 0;
+}
+
+[epub|type~="z3998:poem"] p > span{
+	display: block;
+	padding-left: 1em;
+	text-indent: -1em;
+}
+
+[epub|type~="z3998:poem"] p > span + br{
+	display: none;
+}
+/* End poems */
+
 /* Centered dedications */
 section[epub|type~="dedication"]{
+	font-variant: small-caps; /* The whole dedication is in small caps */
 	text-align: center;
-
-	/* The whole dedication is in small caps */
-	font-variant: small-caps;
 }
 
 section[epub|type~="dedication"] > *{
@@ -74,8 +70,8 @@ section[epub|type~="dedication"] > *{
 }
 
 /* Make strong text larger */
-section[epub|type~="dedication"] strong {
-    font-size: larger;
+section[epub|type~="dedication"] strong{
+	font-size: larger;
 }
 
 @supports(display: flex){
@@ -94,3 +90,24 @@ section[epub|type~="dedication"] strong {
 	}
 }
 /* End centered dedications */
+
+/* Letters */
+footer{
+	margin-top: 1em;
+	text-align: right;
+}
+
+[epub|type~="z3998:salutation"] + p{
+	text-indent: 0;
+}
+
+p[epub|type~="z3998:salutation"]{
+	font-variant: small-caps;
+}
+
+[epub|type~="z3998:postscript"]{
+	margin-top: 1em;
+	text-align: initial;
+	text-indent: 0;
+}
+/* End letters */
