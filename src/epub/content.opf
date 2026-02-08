@@ -66,8 +66,9 @@
 		<meta property="se:url.authority.nacoaf" refines="#author">http://id.loc.gov/authorities/names/n79095154</meta>
 		<meta property="role" refines="#author" scheme="marc:relators">ann</meta>
 		<meta property="role" refines="#author" scheme="marc:relators">aut</meta>
-		<dc:contributor id="artist">Anna Elizabeth Blunden</dc:contributor>
-		<meta property="file-as" refines="#artist">Blunden, Anna Elizabeth</meta>
+		<dc:contributor id="artist">Anna Blunden</dc:contributor>
+		<meta property="file-as" refines="#artist">Blunden, Anna</meta>
+		<meta property="se:name.person.full-name" refines="#artist">Anna Elizabeth Blunden</meta>
 		<meta property="se:url.encyclopedia.wikipedia" refines="#artist">https://en.wikipedia.org/wiki/Anna_Blunden</meta>
 		<meta property="se:url.authority.nacoaf" refines="#artist">http://id.loc.gov/authorities/names/nr94022465</meta>
 		<meta property="role" refines="#artist" scheme="marc:relators">art</meta>
