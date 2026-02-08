@@ -40,25 +40,25 @@ section[epub|type~="epigraph"] > *{
 /* End full-page epigraphs */
 
 /* Poems */
-[epub|type~="z3998:poem"] p{
+[epub|type~="z3998:verse"] p{
 	text-align: initial;
 	text-indent: 0;
 }
 
-[epub|type~="z3998:poem"] p > span{
+[epub|type~="z3998:verse"] p > span{
 	display: block;
 	padding-left: 1em;
 	text-indent: -1em;
 }
 
-[epub|type~="z3998:poem"] p > span + br{
+[epub|type~="z3998:verse"] p > span + br{
 	display: none;
 }
 /* End poems */
 
 /* Centered dedications */
+/* Start template */
 section[epub|type~="dedication"]{
-	font-variant: small-caps; /* The whole dedication is in small caps */
 	text-align: center;
 }
 
@@ -67,11 +67,6 @@ section[epub|type~="dedication"] > *{
 	margin: auto;
 	margin-top: 3em;
 	max-width: 80%;
-}
-
-/* Make strong text larger */
-section[epub|type~="dedication"] strong{
-	font-size: larger;
 }
 
 @supports(display: flex){
@@ -89,6 +84,18 @@ section[epub|type~="dedication"] strong{
 		margin: 0;
 	}
 }
+/* End template */
+
+/* Start manual changes */
+section[epub|type~="dedication"]{
+	font-variant: small-caps; /* The whole dedication is in small caps */
+}
+
+/* Make strong text larger */
+section[epub|type~="dedication"] b{
+	font-size: larger;
+}
+/* End manual changes */
 /* End centered dedications */
 
 /* Letters */
