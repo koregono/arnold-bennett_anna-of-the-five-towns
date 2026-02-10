@@ -99,6 +99,7 @@ section[epub|type~="dedication"] b{
 /* End centered dedications */
 
 /* Letters */
+/* Start template */
 footer{
 	margin-top: 1em;
 	text-align: right;
@@ -117,4 +118,11 @@ p[epub|type~="z3998:salutation"]{
 	text-align: initial;
 	text-indent: 0;
 }
+/* End template */
+
+/* Start manual changes */
+header p[epub|type~="z3998:salutation"]{
+	text-align: initial;
+}
+/* End manual changes */
 /* End letters */
